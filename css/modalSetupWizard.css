@@ -1,0 +1,151 @@
+.wizard-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.wizard-overlay.active {
+    display: flex;
+    animation: fadeInWizard 0.3s ease;
+}
+
+.wizard-card {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    position: relative;
+    padding: 40px 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    animation: slideUpWizard 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wizard-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f0f2f5;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wizard-close:hover {
+    background: #e4e6e9;
+    transform: rotate(90deg);
+}
+
+.wizard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wizard-title {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.wizard-subtitle {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.wizard-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wizard-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8fafc;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.wizard-item:hover {
+    background: #fff;
+    border-color: #00a4b2;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 164, 178, 0.1);
+}
+
+.wizard-icon-box {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 164, 178, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.wizard-icon-box i {
+    color: #00a4b2;
+    font-size: 20px;
+}
+
+.ucloud-accent {
+    background: rgba(0, 0, 0, 0.05);
+}
+.ucloud-accent i {
+    color: #333;
+}
+
+.wizard-text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.wizard-label {
+    font-weight: 700;
+    font-size: 17px;
+    color: #333;
+}
+
+.wizard-desc {
+    font-size: 13px;
+    color: #777;
+}
+
+.wizard-arrow {
+    color: #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.wizard-item:hover .wizard-arrow {
+    color: #00a4b2;
+    transform: translateX(5px);
+}
+
+@keyframes fadeInWizard {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpWizard {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}

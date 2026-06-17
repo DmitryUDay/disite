@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
+
+*{
+    font-family: "Comfortaa", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.shapka{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 10px;
+    width: 100%;
+    height: auto;
+    margin-right: 15px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+     border-bottom: 1px solid rgba(215, 215, 215, 0.627);
+}
+
+
+.filling {
+    color: #4a5568;
+    position: relative;
+    overflow: hidden;
+}
+
+.filling:hover {
+    background-color: rgba(0, 102, 204, 0.08);
+    color: #00A4B2;
+}
+
+.filling::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #00A4B2;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    opacity: 0;
+}
+
+.filling:hover::after {
+    width: 70%;
+    opacity: 1;
+}
+
+.filling.double-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #00A4B2;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.filling.double-line::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #00A4B2;
+    border-radius: 1px;
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+.filling.double-line:hover::after {
+    width: 80%;
+}
+
+.filling.double-line:hover::before {
+    width: 60%;
+}
+
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 24px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -1000px;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: left 0.3s ease;
+  z-index: 1001;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+
+.mobile-menu .havePhone{
+  text-decoration: underline;
+}
+
+.mobile-menu img{
+  text-align: center;
+  margin-top: 0;
+}
+
+.vib{
+  background-color: #00A4B2;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  transition: all 0.3s;
+}
+.vib:hover{
+  background-color: #01818d;
+}
+
+.centere{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    background-color: #00A4B2;
+    color: white;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+}
+
+
+.selfs{
+    display: flex;
+    gap: 20px;
+}
+
+.selfs a{
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+    .shapka img{
+        height: 30px;
+        width: auto;
+    }
+    .vib{
+        font-size: 13px;
+    }
+    .selfs{
+        display: none;
+    }
+    .bannerPrices{
+        margin-top: 70px;
+    }
+    .Blockcontent p{
+        margin-top: 40px;
+    }
+}

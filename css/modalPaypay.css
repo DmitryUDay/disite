@@ -1,0 +1,107 @@
+.p-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-window {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    overflow: auto;
+    font-family: "Nunito", sans-serif;
+    animation: pFadeIn 0.3s ease-out;
+}
+
+@keyframes pFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.p-header {
+    padding: 20px 25px;
+    background: #F6F8FB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.p-title-group { display: flex; align-items: center; gap: 12px; }
+.p-title { font-weight: 700; font-size: 18px; color: #404040; }
+
+.p-close { 
+    font-size: 28px; 
+    cursor: pointer; 
+    color: #aaa; 
+    transition: 0.2s; 
+}
+.p-close:hover { color: #000; }
+
+.p-body { padding: 25px; }
+.p-status { font-size: 15px; color: #666; margin-bottom: 20px; }
+
+.p-methods { display: flex; flex-direction: column; gap: 12px; }
+
+.p-method-card {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    padding: 15px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.p-method-card:hover {
+    border-color: #00a4b2;
+    background: #f0fbfc;
+}
+
+.p-method-icon {
+    width: 40px;
+    height: 40px;
+    background: #F6F8FB;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #00a4b2;
+    font-size: 18px;
+}
+
+.p-method-info { flex-grow: 1; }
+.p-method-info strong { display: block; font-size: 14px; color: #333; }
+.p-method-info span { font-size: 12px; color: #888; }
+
+.p-arrow { color: #ccc; font-size: 12px; }
+
+.p-footer {
+    padding: 15px 25px;
+    background: #F6F8FB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-btn-back {
+    background: none;
+    border: none;
+    color: #888;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+.p-btn-back:hover {
+    color: #333;
+}

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
+a[id="NF"] {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Класс, который добавляется при нажатии */
+a[id="NF"].clicked {
+    animation: nfRedden 0.4s ease forwards;
+}
+
+/* Анимация покраснения */
+@keyframes nfRedden {
+    0% {
+        color: inherit;
+        font-weight: normal;
+        transform: scale(1);
+    }
+    50% {
+        color: #ff6b6b;
+        transform: scale(1.05);
+    }
+    100% {
+        color: #e74c3c;
+        font-weight: normal;
+        transform: scale(1);
+        text-decoration: line-through;
+        opacity: 0.8;
+    }
+}
+
+/* Модальное окно */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    animation: modalPopup 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalPopup {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-50px);
+    }
+    70% {
+        transform: scale(1.05) translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-icon {
+    font-size: 60px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    animation: iconShake 0.5s ease;
+}
+
+@keyframes iconShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.modal-title {
+    color: #e74c3c;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.modal-message {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.modal-button {
+    background: #00a4b2;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 5px 15px #00a3b25c;
+}
+
+.modal-button:hover {
+    background: #01909d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px #00a3b25c;
+}
+
+.modal-button:active {
+    transform: translateY(0);
+}
+
+.example-links {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.example-links h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.code-block {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "Comfortaa", sans-serif;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+.test-area {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
