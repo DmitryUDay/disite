@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /CSS/
+Disallow: /js/
+Disallow: /mamka/
+Disallow: /reesterDOC/
+Allow: /
+
+Sitemap: https://disite-studio.pro/sitemap.xml
