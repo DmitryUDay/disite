@@ -3,14 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCloud Hosting | KodariumLabs Ecosystem</title>
+    <title>UCloud Hosting | Disite Ecosystem</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="UCloudHost.css">
     <link rel="stylesheet" href="css/defoult-header.css">
+    <link rel="stylesheet" href="UCloudHost.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="mandal.css">
     <link rel="stylesheet" href="css/helpModal.css">
+    <link rel="stylesheet" href="css/modalSetupWizard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Основное SEO: То, что увидят в поисковиках -->
+    <title>Хостинг для сайтов и Telegram-ботов от 200₽ — UCloud</title>
+    <meta name="description" content="Надежный хостинг проектов и ботов на серверах UCloud за 200 рублей в месяц. Или скачайте UOS и превратите свой старый ноутбук в личный домашний сервер.">
+    
+    <!-- Open Graph: Чтобы ссылки красиво выглядели в Telegram, VK, Discord и т.д. -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://disite-studio.pro/UCloudHost.html"> <!-- Замени на свой реальный домен -->
+    <meta property="og:title" content="Облачный хостинг UCloud | Серверы для проектов или своя UOS">
+    <meta property="og:description" content="Размещение сайтов и ботов на наших машинах за 200₽/мес. Альтернатива — установка операционной системы UOS на свой компьютер для полного контроля над железом.">
+    <meta property="og:image" content="https://disite-studio.pro/mamka/preview.png"> <!-- Картинка-превью для ссылок (размер лучше 1200x630) -->
+
+    <!-- Основные favicon для браузеров -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://disite-studio.pro/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://disite-studio.pro/favicon-16x16.png">
+
+    <!-- Для Apple устройств (iPhone, iPad) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://disite-studio.pro/apple-touch-icon.png">
+
+    <!-- Для Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://disite-studio.pro/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://disite-studio.pro/android-chrome-512x512.png">
+
+    <!-- Старый формат .ico для совместимости -->
+    <link rel="shortcut icon" href="https://disite-studio.pro/favicon.ico" type="image/x-icon">
+
+    <!-- Манифест для PWA (опционально, но лучше добавить) -->
+    <link rel="manifest" href="https://disite-studio.pro/site.webmanifest" crossorigin="anonymous">
+
+    <!-- Цвет темы браузера (опционально) -->
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
@@ -24,29 +56,36 @@
         <img src="mamka/exampleLogo.png" alt="" width="10%">
         <div class="selfs">
             <a href="index.html" class="filling">Разработка сайтов</a>
-            <a href="UCloudHost.html" class="havee">Облако UCloud</a>
-            <a href="https://dmitryuday.github.io/ABartaj/index.html" class="filling">Проекты и сервисы</a>
-            <a href="" class="filling">Мастер настроек</a>
+            <a href="UCloudHost.html" class="filling">Облако UCloud</a>
+            <a href="https://dmitryuday.github.io/ABartaj/index.html" class="filling">Боты</a>
+            <a onclick="openWizard(); return false;" class="filling">Мастер настроек</a>
             <a onclick="openContactSphere(); return false;" class="filling">Помощь</a>
+        </div>
+        <div>
+            <a onclick="openContactSphere(); return false;">
+                <div class="vib">Обсудить проект</div>
+            </a>
         </div>
     </div>
 
     <!-- Мобильное меню -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Разработка сайтов</a>
-        <a href="UCloudHost.html" class="havePhone">>>> Облако UCloud</a>
-        <a href="https://dmitryuday.github.io/ABartaj/index.html">Проекты и сервисы</a>
-        <a href="https://t.me/Kodarium">Помощь</a>
+        <img src="mamka/exampleLogo.png" alt="">
+            <a href="index.html" class="filling">Разработка сайтов</a>
+            <a href="UCloudHost.html" class="filling">>>>Облако UCloud</a>
+            <a href="https://dmitryuday.github.io/ABartaj/index.html" class="filling">Боты</a>
+            <a onclick="openWizard(); return false;" class="filling">Мастер настроек</a>
+            <a onclick="openContactSphere(); return false;" class="filling">Помощь</a>
     </div>
 
     <div class="overlay" id="overlay"></div>
-
+    <br>
 
 
 <div class="container">
     <header class="animate">
-        <div class="brand-badge">UCloud & KodariumLabs</div>
-        <h1 class="hh1">Хостинг ботов за 100₽</h1>
+        <div class="brand-badge">UCloud & Disite</div>
+        <h1 class="hh1">Хостинг ботов за 200₽</h1>
         <p class="subtitle">Мощная инфраструктура с управлением через Telegram Admin Panel. Просто. Быстро. Доступно.</p>
         
         <div class="eco-buttons">
@@ -58,8 +97,8 @@
     <section class="features animate" style="animation-delay: 0.2s;">
         <div class="features-grid">
             <div class="feature-item">
-                <h3>Управление в TG</h3>
-                <p>Включай, выключай и перезагружай своих ботов прямо в мессенджере. Полный контроль без консоли.</p>
+                <h3 align="center">Управление через сайт</h3>
+                <p>Включай, выключай и перезагружай своих ботов прямо в панеле управлении на сайте. Полный контроль без консоли.</p>
             </div>
             <div class="feature-item">
                 <h3>UCloud System</h3>
@@ -76,12 +115,12 @@
         <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <div class="price-card">
                 <h3>Start</h3>
-                <div class="price-val">100₽ <span>/мес</span></div>
+                <div class="price-val">200₽ <span>/мес</span></div>
                 <p>Идеально для 1 бота</p>
                 <a href="#" class="btn-eco btn-filled" style="display: block; margin-top: 25px;">Купить</a>
             </div>
             <div class="price-card hot">
-                <div class="hot-tag">POPULAR</div>
+                <div class="hot-tag">ТОП</div>
                 <h3>Pro</h3>
                 <div class="price-val">250₽ <span>/мес</span></div>
                 <p>До 5 ботов + приоритет</p>
@@ -119,7 +158,7 @@
 
         <div class="footer">
             <div style="justify-content: center;">
-                <h1>Продукты</h1>
+                <h2>Продукты</h2>
                 <a href="UCloudHost.html">Облако</a>
                 <a href="index.html">Сайт под ключ</a>
                 <a id="NF">Бесплатные API</a>
@@ -129,20 +168,21 @@
             </div>
 
             <div style="justify-content: center;">
-                <h1>Полезное</h1>
-                <a id="NF">Стоимость услуг</a>
-                <a id="NF">Способы оплаты</a>
-                <a id="NF">Документы(реестр UDay)</a>
+                <h2>Полезное</h2>
+                <!-- <a href="#tarifeee">Стоимость услуг</a> -->
+
+                <a href="">Реквизиты</a>
+                <a href="https://dmitryuday.github.io/UDay/reestr.html">Документы(реестр UDay)</a>
+                <a href="https://dmitryuday.github.io/UDay/pdf/policyDisite.pdf">Политика конфиденциальности</a>
                 <a href="https://t.me/RUdolphuFeedBack_bot">Сообщить о проблеме</a>
                 <a href="https://dmitryuday.github.io/UDay/">Сайт UDay</a>
             </div>
 
             <div style="justify-content: center;">
-                <h1>Компания</h1>
+                <h2>Компания</h2>
                 <a href="about.html">О нас</a>
                 <a onclick="openContactSphere(); return false;">Контакты</a>
-                <a id="NF">Новости</a>
-                <a href="https://t.me/saitov_razrabotka">Блог</a>
+                <a href="https://t.me/Disite_studio">Блог</a>
                 <a id="NF">Отзывы клиентов</a>
             </div>
 
@@ -150,7 +190,7 @@
             <div class="sas">
 
                 <div class="bp">
-                    <a href="https://t.me/Kodarium" style="text-decoration: underline;">Менеджер</a>
+                    <a href="tg://resolve?domain=Manager_Disite" style="text-decoration: underline;">Менеджер</a>
                     <i style="color: white;">Отвечает быстро</i>
                 </div>
                 <br>
@@ -161,7 +201,7 @@
                 <br>
                 <div>
                     <div style="display: flex; gap:10px;" class="btn">
-                        <a href="https://vk.ru/kodarium" class="blue"><img src="mamka\social\vkIcon.png" alt="" width="50px"></a>
+                        <a href="https://vk.ru/club239700307" class="blue"><img src="mamka\social\vkIcon.png" alt="" width="50px"></a>
                         <a href="https://t.me/saite_na_zakaz" class="blueW"><img src="mamka\social\tgIcon.png" alt="" width="50px"></a>
                         <a href="404.html" class="green"><img src="mamka\social\whatsAppIcon.png" alt="" width="50px"></a>
                     </div>
@@ -178,8 +218,8 @@
         <hr>
         <br>
         <div style="display: flex; justify-content: space-between;">
-            <p style="color: #CBD5E0;">© 2026  Kodarium. Все права защищены.</p>
-            <a href="https://dmitryuday.github.io/UDay/" style="color: #CBD5E0; text-decoration: underline;">Проект UDay Development</a>
+            <p style="color: #CBD5E0;">© 2026  Disite. Все права защищены.</p>
+            <a href="https://dmitryuday.github.io/UDay/" style="color: #CBD5E0; text-decoration: underline;">Проект UDay Develoop</a>
         </div>
 
     </footer>
@@ -213,6 +253,65 @@
         </div>
     </div>
 
+    
+<div id="wizardModal" class="wizard-overlay">
+    <div class="wizard-card">
+        <button class="wizard-close" onclick="closeWizard()">&times;</button>
+        
+        <div class="wizard-header">
+            <h2 class="wizard-title">Мастер настроек</h2>
+            <p class="wizard-subtitle">Чем могу помочь?</p>
+        </div>
+
+        <div class="wizard-options">
+            <a href="helpSite.html" class="wizard-item">
+                <div class="wizard-icon-box">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="wizard-text">
+                    <span class="wizard-label">Настройка сайта</span>
+                    <span class="wizard-desc">Домен, хостинг, обновление</span>
+                </div>
+                <i class="fas fa-chevron-right wizard-arrow"></i>
+            </a>
+
+            <a href="setup-domain.html" class="wizard-item">
+                <div class="wizard-icon-box">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="wizard-text">
+                    <span class="wizard-label">Индексирование</span>
+                    <span class="wizard-desc">Статистика посещаемости и видимость в поиске</span>
+                </div>
+                <i class="fas fa-chevron-right wizard-arrow"></i>
+            </a>
+
+            <a href="setup-ucloud.html" class="wizard-item">
+                <div class="wizard-icon-box ucloud-accent">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="wizard-text">
+                    <span class="wizard-label">Сервер UCloud</span>
+                    <span class="wizard-desc">Настроить UCloud или получить UOS</span>
+                </div>
+                <i class="fas fa-chevron-right wizard-arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div id="privacy-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #fff; border: 1px solid #00a4b2; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); padding: 20px; z-index: 10000; font-family: sans-serif;">
+    <div style="margin-bottom: 15px; color: #333; font-size: 14px; line-height: 1.4;">
+        Уважаем вашу приватность: работаем без баз данных и слежки. Ваше пребывание на сайте означает согласие с <strong>нашими правилами</strong>
+    </div>
+    <div style="display: flex; gap: 10px; justify-content: flex-end;">
+        <a href="https://dmitryuday.github.io/UDay/pdf/policyDisite.pdf" style="text-decoration: none; color: #00a4b2; font-size: 14px; padding: 10px 15px; border: 1px solid #00a4b2; border-radius: 8px; transition: 0.3s;">Что внутри?</a>
+        <button onclick="acceptPrivacy()" style="background: #00a4b2; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: 0.3s;">Принять</button>
+    </div>
+</div>
+
+
 <div id="contactSphere" class="glassContainer">
   <div class="crystalOverlay"></div>
   <div class="aquaDialog">
@@ -223,7 +322,7 @@
         <i class="fab fa-telegram"></i>
         <span class="flowText">Telegram</span>
       </a>
-      <a href="https://vk.ru/kodarium" target="_blank" class="rippleOption">
+      <a href="https://vk.ru/club239700307" target="_blank" class="rippleOption">
         <i class="fab fa-vk"></i>
         <span class="flowText">VK</span>
       </a>
@@ -243,6 +342,8 @@
 <script src="js/adaptiveBurger.js"></script>
 <script src="js/errorModal.js"></script>
 <script src="js/modal.js"></script>
+<script src="js/modalWizard.js"></script>
+<script src="js/acceptCookie.js"></script>
 
 
 </body>
