@@ -1,0 +1,171 @@
+
+.price-table {
+  border-collapse: collapse;
+  width: 100%; /* полная ширина */
+  margin: 20px auto;
+  font-size: 1.2rem; /* крупнее шрифт */
+  color: #333;
+}
+
+  /* Ячейки с вертикальными линиями между ними */
+.price-table th,
+.price-table td {
+  border-left: none; /* убираем ВСЕ вертикальные линии */
+  padding: 30px;
+}
+
+
+.table-scroll{
+  width: 100%;
+}
+
+/* Добавляем вертикальную линию справа от 1-го столбца */
+.price-table th:nth-child(1),
+.price-table td:nth-child(1) {
+  border-right: 1px solid #ccc; /* или 1px, можно толще */
+}
+
+/* У первой ячейки в каждой строке убираем левый бордер (чтобы не было двойных линий слева таблицы) */
+.price-table th:first-child,
+.price-table td:first-child {
+  border-left: none;
+}
+
+
+/* Вертикальная линия справа у последнего заголовка */
+.price-table thead th:last-child {
+  border-right: none; /* чтобы не было двойной правой линии */
+}
+
+/* Первый столбец - услуги, светлый фон */
+.price-table tbody td:first-child {
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Остальные столбцы — белый фон и текст по центру */
+.price-table tbody td:not(:first-child) {
+  text-align: center;
+}
+
+/* Нижняя линия (подчеркивание) у всех строк кроме последней */
+.price-table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Убираем нижнюю границу у последней строки */
+.price-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Убираем внешние бордеры таблицы слева, справа, сверху и снизу */
+.price-table {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.no-borders th {
+border: none !important;
+}
+
+td{
+  font-weight:bolder;
+}
+
+
+@media (max-width: 768px) {
+    .table-scroll {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+    }
+
+    .price-table {
+        min-width: 900px; /* ВАЖНО: чтобы появилась прокрутка */
+    }
+
+    /* Стили для контейнера таблицы доменов */
+    .domain-table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Сама таблица доменов - минимальная ширина для скролла */
+    .domain-table {
+        min-width: 600px; /* Можно увеличить если не вмещается */
+        width: 100%;
+    }
+    
+    /* Для ячеек таблицы доменов - перенос текста */
+    .domain-table td,
+    .domain-table th {
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 15px 20px; /* Уменьшаем отступы на мобильных */
+    }
+    
+    /* Особенно для первого столбца (названия доменов) */
+    .domain-table td:first-child {
+        font-weight: normal;
+        min-width: 200px;
+    }
+    
+    /* Для второго столбца (цены) */
+    .domain-table td:not(:first-child) {
+        min-width: 150px;
+        text-align: center;
+    }
+
+    /* Убираем горизонтальный скролл для таблицы доменов */
+    .domain-table-scroll {
+        overflow-x: visible; /* Вместо auto */
+        width: 100%;
+    }
+    
+    /* Сама таблица - 100% ширины */
+    .domain-table {
+        min-width: 100% !important; /* Занимает всю ширину */
+        width: 100% !important;
+        table-layout: fixed; /* Фиксируем layout */
+    }
+    
+    /* Для всех ячеек таблицы доменов */
+    .domain-table td,
+    .domain-table th {
+        white-space: normal !important; /* Разрешаем перенос */
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important; /* Переносим длинные слова */
+        padding: 15px 10px !important; /* Уменьшаем горизонтальные отступы */
+        display: table-cell; /* Оставляем как ячейки таблицы */
+        vertical-align: top; /* Выравнивание по верху */
+    }
+    
+    /* Первый столбец (названия доменов) - ширина 60% */
+    .domain-table td:first-child,
+    .domain-table th:first-child {
+        width: 60% !important;
+        text-align: left !important;
+    }
+    
+    /* Второй столбец (цены) - ширина 40% */
+    .domain-table td:not(:first-child),
+    .domain-table th:not(:first-child) {
+        width: 40% !important;
+        text-align: center !important;
+        min-width: auto !important;
+    }
+    
+    /* Заголовок таблицы доменов */
+    .domain-table thead th {
+        font-size: 20px !important; /* Чуть меньше на телефоне */
+        padding: 20px 10px !important;
+    }
+    
+    /* Строки таблицы доменов */
+    .domain-table tbody tr {
+        border-bottom: 1px solid #ccc;
+    }
+}

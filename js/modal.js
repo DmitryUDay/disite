@@ -53,3 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+function lambdaOpen(){
+    closeModal();
+    openContactSphere();
+    return false;
+}

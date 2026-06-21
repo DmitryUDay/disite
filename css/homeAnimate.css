@@ -1,0 +1,142 @@
+/* ===== АНИМАЦИИ ПРИ СКРОЛЛЕ ===== */
+
+/* 1. Эффект ЛЕГО для аккордеона */
+.accordion-item {
+    opacity: 0;
+    transform: translateY(50px) rotateX(-15deg);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.accordion-item.animate-lego {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+
+/* Задержка для каждой детали лего, чтобы они строились по очереди */
+.accordion-item:nth-child(1) { transition-delay: 0.1s; }
+.accordion-item:nth-child(3) { transition-delay: 0.2s; } /* учитываем <hr> */
+.accordion-item:nth-child(5) { transition-delay: 0.3s; }
+.accordion-item:nth-child(7) { transition-delay: 0.4s; }
+
+.cardPriceSite.animate-tariffs {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.cardPriceSite:nth-child(1) { transition-delay: 0.1s; }
+.cardPriceSite:nth-child(2) { transition-delay: 0.3s; }
+.cardPriceSite:nth-child(3) { transition-delay: 0.5s; }
+
+/* 3. Эффект для БЛОКОВ СТАТИСТИКИ (Вылет сбоку с отскоком) */
+
+.rdr.animate-stats {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.rdr:nth-child(1) { transition-delay: 0.1s; }
+.rdr:nth-child(2) { transition-delay: 0.2s; }
+.rdr:nth-child(3) { transition-delay: 0.3s; }
+
+/* Классы активации для Hero (сработают сразу при загрузке) */
+.animate-hero-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-hero-img {
+    opacity: 1 !important;
+    transform: translateX(0) scale(1);
+}
+
+/* 2. Блок FAQ (Частые вопросы) */
+.cardWhat {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cardWhat.animate-faq {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Веерное появление вопросов один за другим */
+.cardWhat:nth-child(1) { transition-delay: 0.1s; }
+.cardWhat:nth-child(2) { transition-delay: 0.2s; }
+.cardWhat:nth-child(3) { transition-delay: 0.3s; }
+
+
+.typing-text{
+  color: #00a4b2;
+}
+
+/* Базовое состояние курсора (при печати и стирании) */
+#matildochka .typing-cursor {
+    display: inline-block;
+    font-weight: 300;
+    margin-left: 4px;
+    opacity: 1; /* Всегда горит при движении текста */
+    transform: scaleY(1); /* Обычная линия */
+    transform-origin: center; /* Сжимается к центру */
+    transition: transform 0.1s ease;
+}
+
+/* Когда текст ОСТАНОВИЛСЯ на паузу (JS добавил класс) */
+#matildochka .typing-cursor.active-pause {
+    /* Запускаем бесконечное сжатие до точки и обратно */
+    animation: matildaPulseY 0.4s infinite alternate ease-in-out;
+}
+
+/* Анимация пульсации по вертикали: линия -> точка -> линия */
+@keyframes matildaPulseY {
+    0% {
+        transform: scaleY(1); /* Целая линия */
+    }
+    100% {
+        transform: scaleY(0); /* Сжалась до точки */
+    }
+}
+
+
+/* Пульсация для привлечения внимания */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #00a4b2; }
+    70% { box-shadow: 0 0 0 10px rgba(255, 64, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 64, 129, 0); }
+}
+
+#chatButton.pulse {
+    animation: pulse 2s infinite;
+}
+
+
+.cardRandom.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Разные анимации для разнообразия */
+.cardRandom:nth-child(2) {
+    transform: translateX(-50px);
+}
+
+.cardRandom:nth-child(2).show {
+    transform: translateX(0);
+}
+
+.cardRandom:nth-child(3) {
+    transform: scale(0.8);
+}
+
+.cardRandom:nth-child(3).show {
+    transform: scale(1);
+}
+
+.cardRandom:nth-child(4) {
+    transform: rotateX(90deg);
+}
+
+.cardRandom:nth-child(4).show {
+    transform: rotateX(0);
+}

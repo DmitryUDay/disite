@@ -9,20 +9,19 @@
     box-sizing: border-box;
 }
 
-
 body, html{
-    &::-webkit-scrollbar {
+    /* &::-webkit-scrollbar {
       display: none;
-    }
+    } */
 
     /* Для Firefox */
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
 
     /* Для старого Internet Explorer и старого Edge */
-    -ms-overflow-style: none; 
+    /* -ms-overflow-style: none;  */
     
     /* На всякий случай убедимся, что скролл вообще разрешен */
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     max-width: 100%;
     background-color: white;
     scroll-behavior: smooth;
@@ -50,9 +49,6 @@ h1,h2{
   pointer-events: all;
 }
 
-
-
-
 .preimuch{
     display: flex;
     flex-wrap: wrap;
@@ -73,7 +69,6 @@ h1,h2{
     gap: 8px;
 }
 
-
 .preimuch span::before {
     content: "✓";
     color: #00a4b2;
@@ -82,6 +77,7 @@ h1,h2{
 
 
 .bannerPrices{
+  margin-top: 40px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   padding: 30px;
@@ -93,20 +89,8 @@ h1,h2{
     width: 100%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 
 }
-
-.blockSites{
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-
-.Blockcontent{
-  width: 100%;
-}
-
 
 .blockSites {
     display: flex;
@@ -117,15 +101,21 @@ h1,h2{
 }
 
 .Blockcontent {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease-out;
+    width: 100%;
     flex: 1;
     min-width: 300px;
 }
 
 .hero-image {
+    opacity: 0 !important;
+    transform: translateX(50px) scale(0.1);
+    transition: all 1s ease-out 0.2s;
     flex: 1;
     min-width: 190px;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
 .buttonPrice1, .buttonPrice2 {
@@ -170,10 +160,6 @@ h1,h2{
     gap: 15px;
 }
 
-
-
-
-
 .advenc{
     margin-top: 5px;
     display: flex;
@@ -191,9 +177,7 @@ h1,h2{
     border-radius: 15px;
     background-color: #00a4b2;
     color: white;
-    padding: 20px;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding: 20px 25px;
 }
 
 
@@ -213,15 +197,12 @@ h1,h2{
   color: white;
 }
 
-
 .sasConnect{
   display: inline-block;
   border-radius: 15px;
   background-color: #00A4B2;
   color: white;
-  padding: 20px;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 20px 25px;
   transition: all 0.3s;
   box-shadow:
         0 2px 10px rgba(0, 0, 0, 0.08),
@@ -239,9 +220,6 @@ h1,h2{
 .connect:hover{
   background-color: #01909d;
 }
-
-
-
 
 .carousel {
   width: 100%;
@@ -305,76 +283,12 @@ h1,h2{
   }
 }
 
-
-
-.custom-list {
-  list-style: none;
-  padding-left: 0;
-  max-width: 300px;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-.custom-list li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 10px;
-}
-
-.custom-list li.cross::before {
-  content: "✗";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgb(165, 165, 165);
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
-.custom-list li.check::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgb(165, 165, 165);
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
-.custom-list li.check1 {
-  position: relative;
-  padding-left: 35px;
-}
-
-.custom-list li.check1::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  background-color: black;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 1rem;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-
-
-
-
 .cardRandom {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease;
   border-radius: 20px;
+  margin-bottom: 30px;
   background-color: #D9E7FF;
   width: 100%; /* Лучше 100%, чтобы занимало всю ширину родителя */
   /* padding: 40px; */
@@ -392,21 +306,13 @@ h1,h2{
 
 .cardRandom h2{
   padding-top: 10px;
-  /* margin-bottom: 100px; */
   text-align: center;
 }
-
-/* .stolb1, .stolb2 .cardRandom {
-  margin-bottom: 30px;
-} */
 
 
 .stolb1, .stolb2{
   width: 50%;
 }
-
-
-
 
 .accordion {
   background-color: #f9f9f9;
@@ -486,25 +392,24 @@ h1,h2{
   padding: 16px 24px;
 }
 
-
 .accordion-item input[type="checkbox"]:checked + .accordion-label .accordion-arrow {
   transform: rotate(135deg);
 }
-
-
-
 
 .accordion hr{
     width: 90%;
     margin: 0 auto;
 }
 
-
-
 .cardPriceSite{
+  opacity: 0;
+  transform: scale(0.8) translateY(30px);
+  transition: all 0.7s ease-out;
   padding: 2px;
   width: 30%;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contentMaker{
@@ -515,6 +420,7 @@ h1,h2{
    border-bottom-right-radius: 20px; 
    border-bottom-left-radius: 20px; 
    padding: 20px;
+   flex-grow: 1;
 }
 
 
@@ -532,7 +438,6 @@ h1,h2{
 .help-button {
     align-items: center;
     display: flex;
-    align-items: center;
     padding: 10px 20px;
     background: none;
     color: rgb(0, 0, 0);
@@ -542,119 +447,17 @@ h1,h2{
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
+    transition: all 0.3s;
 }
-
-
-.cardPriceSite {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Блок с текстом забирает всё свободное пространство и выравнивается по самому высокому */
-.contentMaker {
-    flex-grow: 1;
-}
-
-
-
-
-
-  .price-table {
-    border-collapse: collapse;
-    width: 100%; /* полная ширина */
-    margin: 20px auto;
-    font-size: 1.2rem; /* крупнее шрифт */
-    color: #333;
-  }
-
-  /* Ячейки с вертикальными линиями между ними */
-.price-table th,
-.price-table td {
-  border-left: none; /* убираем ВСЕ вертикальные линии */
-  padding: 30px;
-}
-
-
-.table-scroll{
-  width: 100%;
-}
-
-/* Добавляем вертикальную линию справа от 1-го столбца */
-.price-table th:nth-child(1),
-.price-table td:nth-child(1) {
-  border-right: 1px solid #ccc; /* или 1px, можно толще */
-}
-
-  /* У первой ячейки в каждой строке убираем левый бордер (чтобы не было двойных линий слева таблицы) */
-  .price-table th:first-child,
-  .price-table td:first-child {
-    border-left: none;
-  }
-
-
-  /* Вертикальная линия справа у последнего заголовка */
-  .price-table thead th:last-child {
-    border-right: none; /* чтобы не было двойной правой линии */
-  }
-
-  /* Первый столбец - услуги, светлый фон */
-  .price-table tbody td:first-child {
-    font-weight: 600;
-    text-align: left;
-  }
-
-  /* Остальные столбцы — белый фон и текст по центру */
-  .price-table tbody td:not(:first-child) {
-    text-align: center;
-  }
-
-  /* Нижняя линия (подчеркивание) у всех строк кроме последней */
-  .price-table tbody tr {
-    border-bottom: 1px solid #ccc;
-  }
-
-  /* Убираем нижнюю границу у последней строки */
-  .price-table tbody tr:last-child {
-    border-bottom: none;
-  }
-
-  /* Убираем внешние бордеры таблицы слева, справа, сверху и снизу */
-  .price-table {
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-  }
-
-  .no-borders th {
-  border: none !important;
-}
-
-
-
-.black-pill {
-  display: inline-block;
-  background-color: black;
-  color: white;
-  padding: 20px 60px ;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-  user-select: none;
-  margin: 0 auto; /* центрируем внутри ячейки */
-}
-
-td{
-  font-weight:bolder;
-}
-
 
 .rdr{
   width: 30%;
   border: 1px solid black;
   padding: 60px;
   border-radius: 20px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .rdr h2,p{
@@ -672,8 +475,6 @@ td{
   border-radius: 50%;
 }
 
-
-
 .consult-box {
   display: flex;
   align-items: center;
@@ -685,22 +486,9 @@ td{
   gap: 16px;
 }
 
-
-
-/* кнопка */
-.help-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
 .help-button:hover{
   background-color: #d3d3d3;
 }
-
-
 
 .cardWhat {
   background-color: #f4f4f4;
@@ -749,41 +537,98 @@ td{
   align-self: center;   /* Дополнительное выравнивание */
 }
 
+.salles{
+  color: rgb(151, 28, 28);
+  font-size: 15px;
+  text-decoration: line-through;
+}
 
-.container {
-    width: 100%;
-    height: 70px;
-    text-align: left;
+
+.magaga{
+  margin-top: 50px;
+  margin-bottom: 0;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #ffffffc4;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+#circi{
+  background-color: #a9a9a9c4;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+#scrollToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scrollToTop:hover {
+    background: #dbdbddf3;
+}
+
+/* Кнопка чата */
+#chatButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #00a4b2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.text-container {
-    font-size: 24px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+#chatButton:hover {
+    transform: scale(1.1);
 }
 
-
-
-
-
-
-
-
-
-
-.magaga{
-  margin-top: 50px;
-  margin-right: 50px;
-  margin-bottom: 0;
-  margin-left: 50px;
+.systemPAY{
+  width: 100%;
+  background-color: #F2F4F7;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
+.imagaPay{
+  display: flex;
+  gap: 10px;
+}
+.imagaPay img{
+  width: 70px;
+}
 
 /* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
@@ -809,7 +654,6 @@ td{
     flex-wrap: wrap;
   }
 
-
   .consult-box {
     justify-content: center; /* центрируем строки */
     text-align: center;
@@ -819,14 +663,6 @@ td{
     margin: 0 auto; /* центр по горизонтали */
   }
 
-  .table-scroll {
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
-  }
-
-  .price-table {
-    min-width: 900px; /* ВАЖНО: чтобы появилась прокрутка */
-  }
   .rdr{
     width: 100%;
   }
@@ -863,6 +699,9 @@ td{
   .hero-image{
     display: none;
   }
+  .cardRandom{
+    margin-bottom: 15px;
+  }
   .cardRandom img{
     width: 100%;
   }
@@ -882,358 +721,22 @@ td{
   .modal-icon img{
     width: 90%;
   }
-
-  /* Стили для контейнера таблицы доменов */
-  .domain-table-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Сама таблица доменов - минимальная ширина для скролла */
-  .domain-table {
-    min-width: 600px; /* Можно увеличить если не вмещается */
-    width: 100%;
-  }
-  
-  /* Для ячеек таблицы доменов - перенос текста */
-  .domain-table td,
-  .domain-table th {
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    padding: 15px 20px; /* Уменьшаем отступы на мобильных */
-  }
-  
-  /* Особенно для первого столбца (названия доменов) */
-  .domain-table td:first-child {
-    font-weight: normal;
-    min-width: 200px;
-  }
-  
-  /* Для второго столбца (цены) */
-  .domain-table td:not(:first-child) {
-    min-width: 150px;
-    text-align: center;
-  }
-
-  /* Убираем горизонтальный скролл для таблицы доменов */
-  .domain-table-scroll {
-    overflow-x: visible; /* Вместо auto */
-    width: 100%;
-  }
-  
-  /* Сама таблица - 100% ширины */
-  .domain-table {
-    min-width: 100% !important; /* Занимает всю ширину */
-    width: 100% !important;
-    table-layout: fixed; /* Фиксируем layout */
-  }
-  
-  /* Для всех ячеек таблицы доменов */
-  .domain-table td,
-  .domain-table th {
-    white-space: normal !important; /* Разрешаем перенос */
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important; /* Переносим длинные слова */
-    padding: 15px 10px !important; /* Уменьшаем горизонтальные отступы */
-    display: table-cell; /* Оставляем как ячейки таблицы */
-    vertical-align: top; /* Выравнивание по верху */
-  }
-  
-  /* Первый столбец (названия доменов) - ширина 60% */
-  .domain-table td:first-child,
-  .domain-table th:first-child {
-    width: 60% !important;
-    text-align: left !important;
-  }
-  
-  /* Второй столбец (цены) - ширина 40% */
-  .domain-table td:not(:first-child),
-  .domain-table th:not(:first-child) {
-    width: 40% !important;
-    text-align: center !important;
-    min-width: auto !important;
-  }
-  
-  /* Заголовок таблицы доменов */
-  .domain-table thead th {
-    font-size: 20px !important; /* Чуть меньше на телефоне */
-    padding: 20px 10px !important;
-  }
-  
-  /* Строки таблицы доменов */
-  .domain-table tbody tr {
-    border-bottom: 1px solid #ccc;
-  }
-
-
-
-}
-
-
-
-
-
-#scrollToTop {
-    position: fixed;
-    bottom: 100px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: #a9a9a9c4;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1000;
-}
-
-#scrollToTop.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#scrollToTop:hover {
-    background: #dbdbdda4;
-    transform: scale(1.1);
-}
-
-/* Кнопка чата */
-#chatButton {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #00a4b2;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 28px;
-    cursor: pointer;
-    transition: all 0.3s;
-    z-index: 1000;
+  .systemPAY{
+    padding: 5px 10px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: space-between;
+  }
 
-#chatButton:hover {
-    transform: scale(1.1);
-}
-
-/* Пульсация для привлечения внимания */
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 #00a4b2; }
-    70% { box-shadow: 0 0 0 10px rgba(255, 64, 129, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 64, 129, 0); }
-}
-
-#chatButton.pulse {
-    animation: pulse 2s infinite;
-}
-
-/* Контент для демонстрации */
-.content {
-    height: 2000px;
-    padding: 50px;
-    background: linear-gradient(white, #f0f8ff);
-}
-
-
-
-.base-text {
-    color: #333;
-    white-space: nowrap;
-}
-
-.changing-text {
-    color: #006666; /* Начальный цвет - темно-бирюзовый */
-    min-width: 250px; /* Фиксированная ширина чтобы текст не двигался */
-    display: inline-block;
-    white-space: nowrap;
-}
-
-/* Цвета для градиента бирюзовых оттенков */
-.color-0 { color: #001f1f !important; } /* Самый темный */
-.color-1 { color: #005151 !important; }
-.color-2 { color: #007171 !important; }
-.color-3 { color: #009999 !important; }
-.color-4 { color: #00cccc !important; }
-.color-5 { color: #00ffff !important; } /* Самый светлый */
-#text {
-    color: rgb(0, 0, 0);
-    font-size: clamp(24px, 5vw, 40px); /* адаптивный размер */
-    line-height: 1.3;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-
-.cardRandom.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Разные анимации для разнообразия */
-.cardRandom:nth-child(2) {
-    transform: translateX(-50px);
-}
-
-.cardRandom:nth-child(2).show {
-    transform: translateX(0);
-}
-
-.cardRandom:nth-child(3) {
-    transform: scale(0.8);
-}
-
-.cardRandom:nth-child(3).show {
-    transform: scale(1);
-}
-
-.cardRandom:nth-child(4) {
-    transform: rotateX(90deg);
-}
-
-.cardRandom:nth-child(4).show {
-    transform: rotateX(0);
-}
-
-
-
-
-
-
-
-/* ===== АНИМАЦИИ ПРИ СКРОЛЛЕ ===== */
-
-/* 1. Эффект ЛЕГО для аккордеона */
-.accordion-item {
-    opacity: 0;
-    transform: translateY(50px) rotateX(-15deg);
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.accordion-item.animate-lego {
-    opacity: 1;
-    transform: translateY(0) rotateX(0);
-}
-
-/* Задержка для каждой детали лего, чтобы они строились по очереди */
-.accordion-item:nth-child(1) { transition-delay: 0.1s; }
-.accordion-item:nth-child(3) { transition-delay: 0.2s; } /* учитываем <hr> */
-.accordion-item:nth-child(5) { transition-delay: 0.3s; }
-.accordion-item:nth-child(7) { transition-delay: 0.4s; }
-
-/* 2. Эффект для КАРТОЧЕК ТАРИФОВ (Появление из невидимости с зумом) */
-.cardPriceSite {
-    opacity: 0;
-    transform: scale(0.8) translateY(30px);
-    transition: all 0.7s ease-out;
-}
-
-.cardPriceSite.animate-tariffs {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-}
-
-.cardPriceSite:nth-child(1) { transition-delay: 0.1s; }
-.cardPriceSite:nth-child(2) { transition-delay: 0.3s; }
-.cardPriceSite:nth-child(3) { transition-delay: 0.5s; }
-
-/* 3. Эффект для БЛОКОВ СТАТИСТИКИ (Вылет сбоку с отскоком) */
-.rdr {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.rdr.animate-stats {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.rdr:nth-child(1) { transition-delay: 0.1s; }
-.rdr:nth-child(2) { transition-delay: 0.2s; }
-.rdr:nth-child(3) { transition-delay: 0.3s; }
-
-
-/* 1. Блок HERO (Главный баннер) */
-.Blockcontent {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 1s ease-out;
-}
-
-.hero-image {
-    opacity: 0 !important; /* Перебиваем дефолтную прозрачность */
-    transform: translateX(50px) scale(0.1);
-    transition: all 1s ease-out 0.2s; /* Задержка для картинки */
-}
-
-/* Классы активации для Hero (сработают сразу при загрузке) */
-.animate-hero-text {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.animate-hero-img {
-    opacity: 1 !important;
-    transform: translateX(0) scale(1);
-}
-
-/* 2. Блок FAQ (Частые вопросы) */
-.cardWhat {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.cardWhat.animate-faq {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-/* Веерное появление вопросов один за другим */
-.cardWhat:nth-child(1) { transition-delay: 0.1s; }
-.cardWhat:nth-child(2) { transition-delay: 0.2s; }
-.cardWhat:nth-child(3) { transition-delay: 0.3s; }
-
-
-.typing-text{
-  color: #0095A2;
-}
-
-/* Базовое состояние курсора (при печати и стирании) */
-#matildochka .typing-cursor {
-    display: inline-block;
-    font-weight: 300;
-    margin-left: 4px;
-    opacity: 1; /* Всегда горит при движении текста */
-    transform: scaleY(1); /* Обычная линия */
-    transform-origin: center; /* Сжимается к центру */
-    transition: transform 0.1s ease;
-}
-
-/* Когда текст ОСТАНОВИЛСЯ на паузу (JS добавил класс) */
-#matildochka .typing-cursor.active-pause {
-    /* Запускаем бесконечное сжатие до точки и обратно */
-    animation: matildaPulseY 0.4s infinite alternate ease-in-out;
-}
-
-/* Анимация пульсации по вертикали: линия -> точка -> линия */
-@keyframes matildaPulseY {
-    0% {
-        transform: scaleY(1); /* Целая линия */
-    }
-    100% {
-        transform: scaleY(0); /* Сжалась до точки */
-    }
+  .imagaPay{
+    display: flex;
+    gap: 10px;
+  }
+  .systemPAY p{
+    font-size: 15px;
+  }
+  .imagaPay img{
+    width: 35px;
+  }
 }
