@@ -7,45 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Что-то пошло не так...</title>
-    <meta name="description" content="Kodarium - проект UDay, нацеленный на быстрое, дешевое и качественное создание сайта под ваш бизнес">
-    <meta name="keywords" content="kodarium, сайты под ключ, UDay сайты, заказ сайтов">
     
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="От идеи - до кода от Kodarium - до результата">
-    <meta property="og:description" content="Сайты под ключ за низкую цену">
-
-
-
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="css/helper.css">
-    <link rel="stylesheet" href="mandal.css">
-    <link rel="stylesheet" href="css/helpModal.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/modalTarifee.css">
-    <link rel="stylesheet" href="css/defoult-header.css">
-    <link rel="stylesheet" href="css/modalSetupWizard.css">
-    <link rel="stylesheet" href="css/modalPaypay.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/404Style.css">
 
     <!-- Основные favicon для браузеров -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://kodariumlabs.space/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://kodariumlabs.space/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="https://disite-studio.pro/mamka/notFoundPage.png">
 
-    <!-- Для Apple устройств (iPhone, iPad) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://kodariumlabs.space/apple-touch-icon.png">
-
-    <!-- Для Android -->
-    <link rel="icon" type="image/png" sizes="192x192" href="https://kodariumlabs.space/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://kodariumlabs.space/android-chrome-512x512.png">
-
-    <!-- Старый формат .ico для совместимости -->
-    <link rel="shortcut icon" href="https://kodariumlabs.space/favicon.ico" type="image/x-icon">
-
-    <!-- Манифест для PWA (опционально, но лучше добавить) -->
-    <link rel="manifest" href="https://kodariumlabs.space/site.webmanifest" crossorigin="anonymous">
-
-    <!-- Цвет темы браузера (опционально) -->
     <meta name="theme-color" content="#ffffff">
 
 </head>
@@ -56,7 +22,7 @@
       <img src="https://dmitryuday.github.io/UDay/img/anima.gif" alt="loading animation" width="100%">
     </div>
   <h1>404 - не удалось найти сервис</h1>
-  <p>Ошибка загрузки страницы. Проверьте URL или обратитесь в <a href="https://t.me/osipuwu">поддержку</a></p>
+  <p>Возможно, указан неверный URL-адрес, проект был перенесен на другой порт, или срок действия ссылки просто истек. Проверьте правильность пути или вернитесь на главную.</p>
 
   <div>
     <a href="index.html" class="backBtn">← Вернуться</a>
@@ -66,3 +32,78 @@
 
 </body>
 </html>
+
+
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Comfortaa", sans-serif;
+}
+
+body,html {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 20px;
+    background-color: #F6F8FB;
+}
+
+.message {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 500px;
+}
+
+.message h1 {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+.message p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.backBtn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00A4B2;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(157, 157, 157, 0.5);
+}
+
+.backBtn:hover{
+    background-color: #01818d;
+}
+
+a{
+    color: #00A4B2;
+}
+
+.gif-box  {
+    height: auto;
+    display: block;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .gif-box {
+        width: 100%;
+    }
+}
+</style>
