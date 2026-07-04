@@ -14,17 +14,19 @@
 
 
 
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="css/tabliciaHome.css">
-    <link rel="stylesheet" href="css/homeAnimate.css">
-    <link rel="stylesheet" href="css/helper.css">
-    <link rel="stylesheet" href="mandal.css">
-    <link rel="stylesheet" href="css/helpModal.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/modalTarifee.css">
-    <link rel="stylesheet" href="css/defoult-header.css">
-    <link rel="stylesheet" href="css/modalSetupWizard.css">
-    <link rel="stylesheet" href="css/modalPaypay.css">
+    <link rel="stylesheet" href="home.css"> <!-- Домашний стиль -->
+    <link rel="stylesheet" href="css/tabliciaHome.css"><!-- Стиль таблиц цен -->
+    <link rel="stylesheet" href="css/homeAnimate.css"><!-- Анимации страницы -->
+    <link rel="stylesheet" href="css/helper.css"><!-- Стиль мастера настроек -->
+    <link rel="stylesheet" href="mandal.css"><!-- Окно ошибочной ссылки -->
+    <link rel="stylesheet" href="css/helpModal.css"><!-- Контактное окно помощи -->
+    <link rel="stylesheet" href="css/footer.css"><!-- Футер -->
+    <link rel="stylesheet" href="css/modalTarifee.css"><!-- Сас окно для подробностей о платных под. услугах -->
+    <link rel="stylesheet" href="css/defoult-header.css"><!-- Дуфолтный хедер -->
+    <link rel="stylesheet" href="css/modalSetupWizard.css"><!-- Стиль окна мастера настроек -->
+    <link rel="stylesheet" href="css/modalPaypay.css"><!-- Модалка способов оплаты -->
+    <link rel="stylesheet" href="css/preLoader.css"><!-- Прелодер -->
+    <link rel="stylesheet" href="css/floatButton.css"><!-- Плавающие кнопки вверх и чат -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Основные favicon для браузеров -->
@@ -50,13 +52,16 @@
 
 </head>
 <body>
+    <!-- <div id="preloader">
+        <div class="spinner"></div>
+    </div> -->
     <div class="shapka">
         <div class="burger" id="burger">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <img src="mamka/exampleLogo.png" alt="логотип disite" width="10%">
+        <img src="mamka/exampleLogo.webp" alt="логотип disite" width="10%">
         <div class="selfs">
             <a href="index.html" class="filling">Разработка сайтов</a>
             <a href="UCloudHost.html" class="filling">Облако UCloud</a>
@@ -72,11 +77,11 @@
 
     <!-- Мобильное меню -->
     <div class="mobile-menu" id="mobileMenu">
-        <img src="mamka/exampleLogo.png" alt="логотип disite">
-            <a href="index.html" class="filling">>>>Разработка сайтов</a>
-            <a href="UCloudHost.html" class="filling">Облако UCloud</a>
+        <img src="mamka/exampleLogo.webp" alt="логотип disite">
+            <a href="index.html" class="filling" id="babaGapa"><img src="mamka/icons/site.webp" alt="" width="10%"><p>Разработка сайтов</p></a>
+            <a href="UCloudHost.html" class="filling"><img src="mamka/icons/UCloud.webp" alt="" width="10%"><p>Облако UCloud</p></a>
             <!-- <a onclick="openWizard(); return false;" class="filling">Мастер настроек</a> -->
-            <a onclick="openContactSphere(); return false;" class="filling">Помощь</a>
+            <a onclick="openContactSphere(); return false;" class="filling"><img src="mamka/icons/how.webp" alt="" width="10%"><p>Помощь</p></a>
     </div>
 
     <div class="overlay" id="overlay"></div>
@@ -105,7 +110,7 @@
                     <a href="#worder" class="buttonPrice2">Наши проекты</a>
                 </div>
             </div>
-            <img src="mamka/aska.png" alt="Постер disite" class="hero-image">
+            <img src="mamka/aska.webp" alt="Постер disite" class="hero-image">
 
         </div>
     </div>
@@ -120,34 +125,34 @@
         <div class="carousel-track">
             <div class="carousel-item">
                 <a href="https://zavalituning.ru/">
-                    <img src="mamka/p5.png" alt="Сайт Автосервис">
+                    <img src="mamka/p5.webp" alt="Сайт Автосервис">
                     <p>Автосервис</p>
                 </a>
             </div>
             
             <div class="carousel-item">
-                <img src="mamka/p7.png" alt="Сайт Салон красоты">
+                <img src="mamka/p7.webp" alt="Сайт Салон красоты">
                 <p>Салон красоты</p>
             </div>
 
 
             <div class="carousel-item">
-                <img src="mamka/p1.png" alt="Сайт Официальный сайт">
+                <img src="mamka/p1.webp" alt="Сайт Официальный сайт">
                 <p>Официальный сайт</p>
             </div>
 
             <div class="carousel-item">
-                <img src="mamka/p3.png" alt="Сайт телеграм бота">
+                <img src="mamka/p3.webp" alt="Сайт телеграм бота">
                 <p>Сайт телеграм бота</p>
             </div>
 
             <div class="carousel-item">
-                <img src="mamka/p4.png" alt="Сайт Магазин обуви">
+                <img src="mamka/p4.webp" alt="Сайт Магазин обуви">
                 <p>Магазин обуви</p>
             </div>
 
             <div class="carousel-item">
-                <img src="mamka/p6.png" alt="Школьный сайт">
+                <img src="mamka/p6.webp" alt="Школьный сайт">
                 <p>Школьный сайт</p>
             </div>
 
@@ -160,14 +165,13 @@
     <h2 align="center">Что входит в стоимость</h2>
     <div class="magaga">
 
-        <div style="display: flex; gap: 30px;" class="wrapper">
+        <div class="wrapper">
             <div class="stolb1">
-
                 <div class="cardRandom" style="margin-bottom: 30px;">
                     <h2>Поддержка сайта</h2>
                     <div class="parrentRandom">
                         <p>Не бросаем проекты: если понадобится обновить текст, добавить новые товары, заменить картинки или отредактировать страницу — сделаем всё быстро и без лишней бюрократии.</p>
-                        <img src="mamka/supports.png" alt="поддержка на сайте">
+                        <img src="mamka/supports.webp" alt="поддержка на сайте">
                     </div>
                 </div>
                 
@@ -175,17 +179,17 @@
                     <h2>Полезные советы</h2>
                     <div class="parrentRandom">
                         <p><a href="https://t.me/zakazati_sait" style="text-decoration: underline;">В нашем канале</a> публикуем простые гайды, честные инструкции и полезные фишки. Рассказываем, как устроен веб-дизайн, как работает код и как самостоятельно улучшать свой сайт без программистов.</p>
-                        <img src="mamka\tgChannel.png" alt="полезные советы при заказе сайта">
+                        <img src="mamka\tgChannel.webp" alt="полезные советы при заказе сайта">
                     </div>
                 </div>
             </div>
 
             <div class="stolb2">
-                <div class="cardRandom" style="margin-top: 100px;">
+                <div class="cardRandom" id="upupRandom">
                     <h2>Логотип в подарок</h2>
                     <div class="parrentRandom">
                         <p>Если у вас еще нет фирменного стиля, бесплатно набросаем два сочных варианта логотипа под ваш новый сайт. Поможем выделиться с самого старта.</p>
-                        <img src="mamka/logoFree.png" alt="создадим бесплатный логотип если у вас его нет">
+                        <img src="mamka/logoFree.webp" alt="создадим бесплатный логотип если у вас его нет">
                     </div>
                 </div>
 
@@ -193,7 +197,7 @@
                     <h2>Поможем настроить аналитику и поиск</h2>
                     <div class="parrentRandom">
                         <p>Подключим Яндекс Вебмастер и Google Search Console, чтобы ваш сайт правильно индексировался и быстрее появлялся в поиске. Вы сможете в реальном времени следить за просмотрами, кликами и ключевыми словами.</p>
-                        <img src="mamka/indexing.png" alt="подключим индексацию от гугл и яндекса">
+                        <img src="mamka/indexing.webp" alt="подключим индексацию от гугл и яндекса">
                     </div>
                 </div>
 
@@ -216,7 +220,7 @@
                 <input type="checkbox" id="acc1">
                 <label class="accordion-label" for="acc1">
                     <div class="accordion-icon">
-                        <img src="mamka/tablica/1.png" alt="Иконка" />
+                        <img src="mamka/tablica/1.webp" alt="Иконка" />
                     </div>
                     <div class="accordion-text">Обсуждаем идею</div>
                     <div class="accordion-arrow"></div>
@@ -231,7 +235,7 @@
                 <input type="checkbox" id="acc2">
                 <label class="accordion-label" for="acc2">
                     <div class="accordion-icon">
-                        <img src="mamka/tablica/2.png" alt="Иконка" />
+                        <img src="mamka/tablica/2.webp" alt="Иконка" />
                     </div>
                     <div class="accordion-text">Собираем контент</div>
                     <div class="accordion-arrow"></div>
@@ -246,7 +250,7 @@
                 <input type="checkbox" id="acc3">
                 <label class="accordion-label" for="acc3">
                     <div class="accordion-icon">
-                        <img src="mamka/tablica/3.png" alt="Иконка" />
+                        <img src="mamka/tablica/3.webp" alt="Иконка" />
                     </div>
                     <div class="accordion-text">Утверждаем дизайн</div>
                     <div class="accordion-arrow"></div>
@@ -261,7 +265,7 @@
                 <input type="checkbox" id="acc4">
                 <label class="accordion-label" for="acc4">
                     <div class="accordion-icon">
-                        <img src="mamka/tablica/4.png" alt="Иконка" />
+                        <img src="mamka/tablica/4.webp" alt="Иконка" />
                     </div>
                     <div class="accordion-text">Собираем готовый сайт</div>
                     <div class="accordion-arrow"></div>
@@ -276,7 +280,7 @@
                 <input type="checkbox" id="acc5">
                 <label class="accordion-label" for="acc5">
                     <div class="accordion-icon">
-                        <img src="mamka/tablica/5.png" alt="Иконка" />
+                        <img src="mamka/tablica/5.webp" alt="Иконка" />
                     </div>
                     <div class="accordion-text">Оплата и финальный запуск</div>
                     <div class="accordion-arrow"></div>
@@ -363,11 +367,11 @@
             <div class="systemPAY">
                 <p>Платите любым удобным способом</p>
                 <div class="imagaPay">
-                    <img src="mamka/social/MCard.png" alt="">
-                    <img src="mamka/social/Vcard.png" alt="">
-                    <img src="mamka/social/MiCard.png" alt="">
-                    <img src="mamka/social/TCard.png" alt="">
-                    <img src="mamka/social/SBP.png" alt="">
+                    <img src="mamka/social/MCard.webp" alt="">
+                    <img src="mamka/social/Vcard.webp" alt="">
+                    <img src="mamka/social/MiCard.webp" alt="">
+                    <img src="mamka/social/TCard.webp" alt="">
+                    <img src="mamka/social/SBP.webp" alt="">
                 </div>
             </div>
             <br>
@@ -379,7 +383,7 @@
                 </div>
 
                 <a onclick="openContactSphere(); return false;" target="_blank" class="help-button">
-                    <img src="mamka/what.png" alt="Telegram" width="30px">
+                    <img src="mamka/what.webp" alt="Telegram" width="30px">
                     <p>Консультация</p>
                 </a>
             </div>
@@ -404,7 +408,7 @@
                         <tr class="sas-info-row" 
                             data-title="Адрес сайта (Домен)" 
                             data-desc="Домен — это адрес вашего бизнеса в интернете, как номер офиса или дома на карте (например, moy-biznes.ru). Если его не оплатить, клиенты просто не найдут вход и сайт перестанет открываться." 
-                            data-img="mamka/example/1ex.png" 
+                            data-img="mamka/example/1ex.webp" 
                             data-plans="no,yes,yes">
                             <td>Продлить адрес сайта на год <span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">от 200₽</td>
@@ -413,7 +417,7 @@
                         <tr class="sas-info-row" 
                             data-title="Продвижение сайта" 
                             data-desc="Если вы хотите, чтобы ваш сайт понравился Google или Yandex и они вас продвигали в ТОП по поиску, то доверьте это дело нам!" 
-                            data-img="mamka/example/2ex.png" 
+                            data-img="mamka/example/2ex.webp" 
                             data-plans="no,no,no">
                             <td>Поисковая оптимизация <span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">от 20.000₽</td>
@@ -422,7 +426,7 @@
                         <tr class="sas-info-row" 
                             data-title="Аренда места (UCloud)" 
                             data-desc="Хостинг — это как ежемесячная коммуналка. Это «земля», на которой стоит ваш сайт. Мы используем свои серверы, чтобы ваш «дом» не тормозил и выдерживал наплыв толпы клиентов." 
-                            data-img="mamka/example/3ex.png" 
+                            data-img="mamka/example/3ex.webp" 
                             data-plans="yes,yes,yes">
                             <td>UCloud Хостинг (1 месяц) <span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">200₽</td>
@@ -431,7 +435,7 @@
                         <tr class="sas-info-row" 
                             data-title="Косметический ремонт" 
                             data-desc="Если у вас поменялся номер телефона, адрес или цена на услугу — мы всё быстро подправим. Это как освежить вывеску на входе, чтобы информация всегда была актуальной." 
-                            data-img="mamka/example/4ex.png" 
+                            data-img="mamka/example/4ex.webp" 
                             data-plans="yes,yes,yes">
                             <td>Мелкие правки (1шт.)<span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">200₽</td>
@@ -440,7 +444,7 @@
                         <tr class="sas-info-row" 
                             data-title="Фирменный значок" 
                             data-desc="Та самая маленькая иконка на вкладке браузера. С ней ваш сайт выглядит солидно и не теряется среди кучи других открытых вкладок у пользователя." 
-                            data-img="mamka/example/5ex.png" 
+                            data-img="mamka/example/5ex.webp" 
                             data-plans="no,yes,yes">
                             <td>Фав иконка <span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">100₽</td>
@@ -449,7 +453,7 @@
                         <tr class="sas-info-row" 
                             data-title="Фирменный значок" 
                             data-desc="Активная кнопка в углу экрана, которая плавно скроллит сайт наверх и открывает меню мгновенной связи (Звонок, Telegram, WhatsApp) при клике. Адаптирована под мобильные устройства." 
-                            data-img="mamka/example/6ex.png" 
+                            data-img="mamka/example/6ex.webp" 
                             data-plans="no,yes,yes">
                             <td>Виджет связи <span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">500₽</td>
@@ -458,7 +462,7 @@
                         <tr class="sas-info-row" 
                             data-title="Безопасный вход (SSL)" 
                             data-desc="Это цифровой замок. Он вешает значок замочка в браузере. Без него браузеры будут пугать клиентов надписью «Сайт опасен», а с ним — полное доверие." 
-                            data-img="mamka/example/7ex.png" 
+                            data-img="mamka/example/7ex.webp" 
                             data-plans="yes,yes,yes">
                             <td>SSL сертификат <span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">500₽</td>
@@ -467,7 +471,7 @@
                         <tr class="sas-info-row" 
                             data-title="Юридическая защита" 
                             data-desc="Официальная бумага для проверок. По закону РФ (152-ФЗ), если вы берете даже имя клиента, нужна эта политика, иначе можно влететь на крупный штраф." 
-                            data-img="mamka/example/8ex.png" 
+                            data-img="mamka/example/8ex.webp" 
                             data-plans="no,no,yes">
                             <td>Политика конфиденциальности <span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">500₽</td>
@@ -476,7 +480,7 @@
                         <tr class="sas-info-row" 
                             data-title="Указатель на карте" 
                             data-desc="Встроим интерактивную карту прямо в сайт. Клиенту не придется копировать адрес — он сразу увидит, как к вам доехать или дойти." 
-                            data-img="mamka/example/9ex.png" 
+                            data-img="mamka/example/9ex.webp" 
                             data-plans="no,no,yes">
                             <td>Интеграция Яндекс Карт <span class="sas-question-mark">?</span></td>
                             <td style="text-align: center;">300₽</td>
@@ -489,7 +493,7 @@
                 <div class="sas-modal-content">
                     <span class="sas-close">&times;</span>
                     <h2 id="sasModalTitle">Услуга угуга</h2>
-                    <img id="sasModalImg" src="mamka/example/worma.png" alt="Пример съел червячок worma" style="width:100%; border-radius:10px; margin: 15px 0;">
+                    <img id="sasModalImg" src="mamka/example/worma.webp" alt="Пример съел червячок worma" style="width:100%; border-radius:10px; margin: 15px 0;">
                     <p id="sasModalDesc">Какое-то описание для чего-то</p>
                 </div>
             </div>
@@ -508,19 +512,19 @@
         <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
 
             <div class="rdr" style="background-color: #00a4b2; border: none;">
-                <img src="mamka/rocket.png" alt="Опыт работы" style="background-color: white;">
+                <img src="mamka/rocket.webp" alt="Опыт работы" style="background-color: white;">
                 <h2 style="color: white;">4 года</h2>
                 <p style="color: white;">Профессионально создаем IT-продукты с 2022 года. Пишем чистый код, запускаем стабильные проекты и отвечаем за финальный результат.</p>
             </div>
 
             <div class="rdr">
-                <img src="mamka/card.png" alt="Разработка">
+                <img src="mamka/card.webp" alt="Разработка">
                 <h2>Ручная работа</h2>
                 <p>Никаких скучных шаблонов и конструкторов. Пишем код вручную под вашу задачу - сайт будет летать на любых устройствах и сразу понравится вашим клиентам.</p>
             </div>
 
             <div class="rdr">
-                <img src="mamka/love.png" alt="Надежность">
+                <img src="mamka/love.webp" alt="Надежность">
                 <h2>С заботой</h2>
                 <p>Мы искренне любим то, что делаем. В каждый проект мы вкладываем максимум усилий, уделяя внимание каждой строчке кода и каждому пикселю.</p>
             </div>
@@ -576,8 +580,8 @@
 
                 <div style="justify-content: center;">
                     <h2>Создание сайтов</h2>
-                    <a href="">Сайт-визитка</a>
-                    <a href="">Лендинг Пейдж</a>
+                    <a href="vizitka.html">Сайт-визитка</a>
+                    <a href="landingPage.html">Лендинг Пейдж</a>
                     <a href="">Корпоративный сайт</a>
                     <a href="">Интернет магазин</a>
                     <a href="">Сайт под ключ</a>
@@ -633,18 +637,17 @@
                 <br>
                 <div>
                     <div style="display: flex; gap:10px;" class="btn">
-                        <a href="https://vk.ru/club239700307" class="blue"><img src="mamka\social\vkIcon.png" alt="иконка вк" width="50px"></a>
-                        <a href="https://t.me/zakazati_sait" class="blueW"><img src="mamka\social\tgIcon.png" alt="иконка телеграм" width="50px"></a>
-                        <a href="404.html" class="green"><img src="mamka\social\whatsAppIcon.png" alt="иконка вацап" width="50px"></a>
+                        <a href="https://vk.ru/club239700307" class="blue"><img src="mamka\social\vkIcon.webp" alt="иконка вк" width="50px"></a>
+                        <a href="https://t.me/zakazati_sait" class="blueW"><img src="mamka\social\tgIcon.webp" alt="иконка телеграм" width="50px"></a>
+                        <a href="https://dzen.ru/disite_studio?share_to=link" class="black"><img src="mamka\social\whatsAppIcon.webp" alt="иконка вацап" width="50px"></a>
                     </div>
                     <div style="display: flex; gap:10px;" class="btn">
-                        <a href="https://github.com/DmitryUDay" class="black"><img src="mamka\social\githubIcon.png" alt="иконка гитхаб" width="50px"></a>
-                        <a href="404.html" class="red"><img src="mamka\social\youtubeIcon.png" alt="иконка ютюб" width="50px"></a>
-                        <a href="404.html" class="black"><img src="mamka\social\tiktokIcon.png" alt="иконка тикток" width="50px"></a>
+                        <a href="https://github.com/DmitryUDay" class="black"><img src="mamka\social\githubIcon.webp" alt="иконка гитхаб" width="50px"></a>
+                        <a href="404.html" class="red"><img src="mamka\social\youtubeIcon.webp" alt="иконка ютюб" width="50px"></a>
+                        <a href="404.html" class="black"><img src="mamka\social\tiktokIcon.webp" alt="иконка тикток" width="50px"></a>
                     </div>
                 </div>
             </div>
-
         </div>
         <br>
         <hr>
@@ -774,18 +777,18 @@
 
 
 
-<script src="js/adaptiveBurger.js"></script>
-<script src="js/errorModal.js"></script>
-<script src="js/upBTN.js"></script>
-<script src="js/modal.js"></script>
-<script src="js/cardVzuh.js"></script>
-<script src="js/acceptCookie.js"></script>
-<script src="js/modalTareffe.js"></script>
-<script src="js/aboutAnimation.js"></script>
-<script src="js/modalWizard.js"></script>
-<script src="js/modalPay.js"></script>
-<script src="js/pechatMachine.js"></script>
-<script src="js/karousel.js"></script>
+<script src="js/adaptiveBurger.js"></script> <!-- бургер Меню для телефонов -->
+<script src="js/errorModal.js"></script><!-- Ошибочная ссылка -->
+<script src="js/upBTN.js"></script><!-- Кнопка вверх -->
+<script src="js/modal.js"></script><!-- Кнопка помощи с контактами -->
+<script src="js/cardVzuh.js"></script><!-- какаята хуйня -->
+<script src="js/acceptCookie.js"></script><!-- Окно принятия куки -->
+<script src="js/modalTareffe.js"></script><!-- модалка с подробностями о доп услугах -->
+<script src="js/aboutAnimation.js"></script><!-- Анимации всей страницы -->
+<script src="js/modalWizard.js"></script><!-- Модалка мастера настроек -->
+<script src="js/modalPay.js"></script><!-- Модалка для оплаты -->
+<script src="js/pechatMachine.js"></script><!-- Анимация печати текста -->
+<script src="js/karousel.js"></script><!-- Каруселька -->
 
 
 
@@ -806,3 +809,20 @@
 <!-- /Yandex.Metrika counter -->
 </body>
 </html>
+
+
+<!-- <script>
+    const preloader = document.getElementById('preloader');
+
+    function hidePreloader() {
+    if (!preloader.classList.contains('loader-hidden')) {
+        preloader.classList.add('loader-hidden');
+    }
+    }
+
+    // 1. Если всё загрузилось быстро (код, картинки)
+    window.addEventListener('load', hidePreloader);
+
+    // 2. Страховка: если интернет — пиздец, вырубаем прелоадер через 2 секунды в любом случае
+    setTimeout(hidePreloader, 2000);
+</script> -->

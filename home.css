@@ -34,20 +34,6 @@ a{
 h1,h2{
   color: rgb(64, 64, 64);
 }
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s;
-  z-index: 1000;
-}
-
-.overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
 
 .preimuch{
     display: flex;
@@ -292,6 +278,7 @@ h1,h2{
   background-color: #D9E7FF;
   width: 100%; /* Лучше 100%, чтобы занимало всю ширину родителя */
   /* padding: 40px; */
+  padding-top: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Немного тени */
 }
 
@@ -472,7 +459,12 @@ h1,h2{
   width: 30%;
   padding: 10px;
   background-color: #ededed;
-  border-radius: 50%;
+  border-radius: 50%; /* Возвращай круг взад, теперь всё будет ровно */
+  
+  /* ВОТ ЭТИ ДВЕ СТРОЧКИ ВСЁ ИСПРАВЯТ: */
+  box-sizing: border-box;  /* Паддинг больше не будет распирать ширину в прямоугольник */
+  aspect-ratio: 1 / 1;     /* Гарантирует идеальный круг при любых раскладах */
+  object-fit: contain;     /* На всякий случай, чтобы сама иконка не сжималась */
 }
 
 .consult-box {
@@ -551,67 +543,6 @@ h1,h2{
   margin-left: 50px;
 }
 
-
-#scrollToTop {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background: #ffffffc4;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 50px;
-    padding: 12px;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1000;
-}
-#circi{
-  background-color: #a9a9a9c4;
-  border-radius: 50px;
-  padding: 10px;
-  font-size: 25px;
-}
-
-#scrollToTop.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#scrollToTop:hover {
-    background: #dbdbddf3;
-}
-
-/* Кнопка чата */
-#chatButton {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #00a4b2;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 28px;
-    cursor: pointer;
-    transition: all 0.3s;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#chatButton:hover {
-    transform: scale(1.1);
-}
-
 .systemPAY{
   width: 100%;
   background-color: #F2F4F7;
@@ -630,11 +561,34 @@ h1,h2{
   width: 70px;
 }
 
+.wrapper{
+  display: flex; 
+  gap: 30px;
+}
+
+#upupRandom{
+  margin-top: 100px;
+}
+
+ul {
+    list-style: none; /* Убираем стандартные точки */
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    text-align: center;
+}
+
+/* Добавляем свои точки через псевдоэлемент */
+ul li::before {
+    content: "•";
+    margin-right: 10px;
+    color: #000000; /* Цвет точки */
+}
+
 /* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
-  .selfs {
-    display: none;
-  }
 
   .stolb1, .stolb2{
     flex-wrap: wrap;
@@ -652,6 +606,14 @@ h1,h2{
 
   .wrapper{
     flex-wrap: wrap;
+    gap: 1px;
+  }
+  #upupRandom{
+    margin-top: 0;
+  }
+
+  .contentMaker p{
+    font-size: 19px;
   }
 
   .consult-box {
@@ -715,6 +677,7 @@ h1,h2{
     height: 20px;
   }
   .cardRandom h2{
+    margin-top: 15px;
     padding: 4px;
   }
 

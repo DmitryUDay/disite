@@ -2,6 +2,8 @@
 
 *{
     font-family: "Comfortaa", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 a{
@@ -147,12 +149,18 @@ a{
 .vib{
   background-color: #00A4B2;
   padding: 10px;
+  margin-right: 20px;
   border-radius: 20px;
   color: white;
   transition: all 0.3s;
 }
 .vib:hover{
   background-color: #01818d;
+}
+
+.vib a{
+    color: white;
+    text-decoration: none;
 }
 
 .centere{
@@ -183,7 +191,76 @@ a{
 }
 
 
+/* --- ДЛЯ ВСЕЙ СТРАНИЦЫ --- */
+html {
+    /* Для Firefox: первый цвет — ползунок, второй — прозрачный трек */
+    scrollbar-color: #00A4B2 transparent; 
+    scrollbar-width: thin; 
+}
+
+/* Настройки для WebKit (Chrome, Safari, Edge, Opera) */
+
+/* 1. Ширина полосы скролла */
+::-webkit-scrollbar {
+    width: 5px; /* Толщина твоей ниточки */
+}
+
+/* 2. Полностью убираем фон (трек), делая его прозрачным */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* 3. Убиваем стрелки намертво, если браузер решит их нарисовать */
+::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* 4. Сам бегунок (полоска) */
+::-webkit-scrollbar-thumb {
+    background: #00A4B2; /* Цвет полоски, меняй на любой */
+    border-radius: 10px; /* Скругление, чтобы выглядело аккуратно */
+}
+
+/* 5. Цвет полоски при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: #01c2d4; /* Становится чуть ярче при наведении */
+}
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
+    .filling{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    #babaGapa{
+        background-color: #EEF1F6;
+        border-radius: 5px;
+        padding: 8px;
+    }
     .burger {
         display: flex;
     }

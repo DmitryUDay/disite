@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/defoult-header.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/helpModal.css"><!-- Контактное окно помощи -->
+    <link rel="stylesheet" href="mandal.css"><!-- Окно ошибочной ссылки -->
+    <link rel="stylesheet" href="css/floatButton.css"><!-- Плавающие кнопки вверх и чат -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+
+    <div class="shapka">
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="mamka/exampleLogo.webp" alt="логотип disite" width="10%">
+        <div class="selfs">
+            <a href="index.html" class="filling">Разработка сайтов</a>
+            <a href="UCloudHost.html" class="filling">Облако UCloud</a>
+            <!-- <a onclick="openWizard(); return false;" class="filling">Мастер настроек</a> -->
+            <a onclick="openContactSphere(); return false;" class="filling">Помощь</a>
+        </div>
+        <div>
+            <a onclick="openContactSphere(); return false;">
+                <div class="vib">Обсудить проект</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <img src="mamka/exampleLogo.webp" alt="логотип disite">
+            <a href="index.html" class="filling"><img src="mamka/icons/site.webp" alt="" width="10%"><p>Разработка сайтов</p></a>
+            <a href="UCloudHost.html" class="filling"><img src="mamka/icons/UCloud.webp" alt="" width="10%"><p>Облако UCloud</p></a>
+            <!-- <a onclick="openWizard(); return false;" class="filling">Мастер настроек</a> -->
+            <a onclick="openContactSphere(); return false;" class="filling"><img src="mamka/icons/how.webp" alt="" width="10%"><p>Помощь</p></a>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ОСНОВНОЙ КОНТЕЙНЕР С ЦЕНТРИРОВАНИЕМ -->
+    <div class="page-wrapper">
+        <div class="bgContainer">
+            <h2>Лендинг</h2>
+            <br>
+            <p>Одностраничный сайт для быстрых продаж "Здесь и сейчас" без лишней информации. Только фокус на покупку или заявку.</p>
+            <br>
+            <br>
+            <ul>
+                <li>Цель: Превратить посетителя в покупателя за 1 экран.</li>
+                <li>Фишка: Чистая психология продаж и горячие предложения</li>
+                <li>Для кого: Реклама, сезонный товар, инфопродукты, мероприятия</li>
+            </ul>
+            <br>
+            <br>
+            <div class="btnZakaz">
+                <h2>От 10.000₽</h2>
+                <button><a onclick="openContactSphere(); return false;">Заказать</a></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footer">
+            <div style="flex-wrap: wrap; display: flex; gap: 30px;">
+                <div style="justify-content: center;">
+                    <h2>Продукты</h2>
+                    <a href="UCloudHost.html">Хостинговое ПО</a>
+                    <a href="UCloudHost.html">UCloud</a>
+                    <a id="NF">Бесплатные API</a>
+                    <a href="https://dmitryuday.github.io/ABartaj/index.html">ABartaj</a>
+                    <a id="NF">Защита от DoS</a>
+                    <a id="NF">Антивирус Machine Sheeld</a>
+                </div>
+
+                <div style="justify-content: center;">
+                    <h2>Создание сайтов</h2>
+                    <a href="vizitka.html">Сайт-визитка</a>
+                    <a href="landingPage.html">Лендинг Пейдж</a>
+                    <a href="">Корпоративный сайт</a>
+                    <a href="">Интернет магазин</a>
+                    <a href="">Сайт под ключ</a>
+                </div>
+
+                <div style="justify-content: center;">
+                    <h2>SEO</h2>
+                    <a href="">Продвижение</a>
+                    <a href="">Оптимизация</a>
+                    <a href="">Оптимизация под нейросети</a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+
+                <div style="justify-content: center;">
+                    <h2>Полезное</h2>
+                    <!-- <a href="#tarifeee">Стоимость услуг</a> -->
+
+                    <a href="">Реквизиты</a>
+                    <a href="https://dmitryuday.github.io/UDay/reestr.html">Документы(реестр UDay)</a>
+                    <a href="https://dmitryuday.github.io/UDay/pdf/policyDisite.pdf">Политика конфиденциальности</a>
+                    <a href="tg://resolve?domain=RUdolphuFeedBack_bot">Сообщить о проблеме</a>
+                    <a href="https://dmitryuday.github.io/UDay/">Сайт UDay</a>
+                </div>
+
+                <div style="justify-content: center;">
+                    <h2>Компания</h2>
+                    <a href="about.html">О нас</a>
+                    <a href="about.html">Портфолио</a>
+                    <a href="about.html">Платежные системы</a>
+                    <a onclick="openContactSphere(); return false;">Контакты</a>
+                    <a href="https://t.me/Disite_studio">Блог</a>
+                    <a id="NF">Отзывы клиентов</a>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="sas">
+
+                <div class="bp">
+                    <a href="tg://resolve?domain=Manager_Disite" style="text-decoration: underline;">Менеджер</a>
+                    <i style="color: white;">Отвечает быстро</i>
+                </div>
+                <br>
+                <div class="bp">
+                    <a href="tg://resolve?domain=RUdolphuFeedBack_bot" style="text-decoration: underline;">Бот отзывов</a>
+                    <i style="color: white;">Оставьте свой отзыв о сервисе</i>
+                </div>
+                <br>
+                <div>
+                    <div style="display: flex; gap:10px;" class="btn">
+                        <a href="https://vk.ru/club239700307" class="blue"><img src="mamka\social\vkIcon.webp" alt="иконка вк" width="50px"></a>
+                        <a href="https://t.me/zakazati_sait" class="blueW"><img src="mamka\social\tgIcon.webp" alt="иконка телеграм" width="50px"></a>
+                        <a href="https://dzen.ru/disite_studio?share_to=link" class="black"><img src="mamka\social\whatsAppIcon.webp" alt="иконка вацап" width="50px"></a>
+                    </div>
+                    <div style="display: flex; gap:10px;" class="btn">
+                        <a href="https://github.com/DmitryUDay" class="black"><img src="mamka\social\githubIcon.webp" alt="иконка гитхаб" width="50px"></a>
+                        <a href="404.html" class="red"><img src="mamka\social\youtubeIcon.webp" alt="иконка ютюб" width="50px"></a>
+                        <a href="404.html" class="black"><img src="mamka\social\tiktokIcon.webp" alt="иконка тикток" width="50px"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div style="display: flex; justify-content: space-between;">
+            <p style="color: #CBD5E0;">© 2026  Disite. Все права защищены.</p>
+            <a href="https://dmitryuday.github.io/UDay/" style="color: #CBD5E0; text-decoration: underline;">Проект UDay Develoop</a>
+        </div>
+
+    </footer>
+
+    <button id="scrollToTop" title="Наверх"><i class="fas fa-chevron-up" id="circi"></i><p>Наверх</p></button>
+
+    <button id="chatButton" onclick="openContactSphere(); return false;" target="_blank" title="Открыть чат"><i class="fas fa-comments" style="color: white;"></i></button>
+
+
+
+
+
+    <div id="nfModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon"><img src="https://dmitryuday.github.io/UDay/img/anima.gif" alt="анимация ошибки" width="70%"></div>
+            <h2 class="modal-title">Опаньки</h2>
+            <p class="modal-message" >
+                К сожалению, эта страница временно недоступна.
+                Мы уже исправляем проблему.<br>
+                Если вопрос срочный, свяжитесь с <br> <a onclick="lambdaOpen()" style="color: #3498db;">службой поддержки</a>.
+
+            </p>
+            <button class="modal-button" onclick="closeModal()">Понятно</button>
+        </div>
+    </div>
+
+    <div id="contactSphere" class="glassContainer">
+        <div class="crystalOverlay"></div>
+        <div class="aquaDialog">
+            <button class="crystalClose" id="clClosee">×</button>
+            <h2 class="oceanTitle">Выберите вариант связи</h2>
+            <div class="waveOptions">
+            <a href="tg://resolve?domain=Manager_Disite" target="_blank" class="rippleOption">
+                <i class="fab fa-telegram"></i>
+                <span class="flowText">Telegram</span>
+            </a>
+            <a href="https://vk.ru/club239700307" target="_blank" class="rippleOption">
+                <i class="fab fa-vk"></i>
+                <span class="flowText">VK</span>
+            </a>
+            <a href="https://wa.me/79881892838" target="_blank" class="rippleOption">
+                <i class="fab fa-whatsapp"></i>
+                <span class="flowText">WhatsApp</span>
+            </a>
+            <div class="rippleOption rippleDisabled">
+                <i class="fas fa-robot"></i>
+                <span class="flowText">TG Бот</span>
+                <span class="soonBadge">скоро</span>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="js/adaptiveBurger.js"></script> <!-- бургер Меню для телефонов -->
+<script src="js/errorModal.js"></script><!-- Ошибочная ссылка -->
+<script src="js/modal.js"></script><!-- Кнопка помощи с контактами -->
+<script src="js/upBTN.js"></script><!-- Кнопка вверх -->
