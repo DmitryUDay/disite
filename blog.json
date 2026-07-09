@@ -1,0 +1,22 @@
+[
+  {
+    "preview": "https://www.e-xecutive.ru/uploads/article/image/1995248/thumb_money.jpg",
+    "category": "Сайты",
+    "date": "5 июля 2026",
+    "title": "Почему я перестал считать сайт лишней тратой денег?",
+    "miniOpiska": "какоето короткое описание. давайте вместе заберем у димы южакова иголки с допингом!",
+    "timeRead": "6 минут чтения",
+    "link": "articles/why-websites.html"
+  },
+  {
+    "id": "123GenerationID",
+    "category": "Сайты",
+    "title": "Почему я перестал считать сайт лишней тратой денег?",
+    "date": "5 июля 2026",
+    "author": "Админ",
+    "viewsFake": 142,
+    "timeRead": "6 минут чтения",
+    "preview": "mamka/preview.webp",
+    "content": "Тут идет твой текст. Привет мир! [mamka/inner-img1.webp] А вот и продолжение текста после картинки. И еще немного мыслей [mamka/inner-img2.webp] и финал поста."
+  }
+]
