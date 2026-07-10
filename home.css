@@ -463,7 +463,11 @@ h1,h2{
 }
 
 .rdr h2{
-  font-size: 55px;
+  font-size: 45px;
+}
+
+.rdr p{
+  padding-top: 10px;
 }
 
 .rdr img{

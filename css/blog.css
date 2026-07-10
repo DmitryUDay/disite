@@ -1,0 +1,102 @@
+.banner{
+    margin-top: 70px;
+    background-color: #e9edef;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner img{
+    width: 50%;
+}
+
+.margagens{
+    margin-top: 50px;
+}
+
+
+.contentBanner{
+    padding: 20px;
+    width: 40%;
+    padding-top: 40px;
+}
+
+.contentBanner h2{
+    font-size: 40px;
+}
+.contentBanner p{
+    font-size: 15px;
+}
+
+.filterr{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 20px;
+}
+
+
+
+.cardPloditor{
+    width: 60%;
+    padding: 0 50px;
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.cardPloditor img{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.cardPloditor h2{
+    font-size: 20px;
+}
+
+.headContent{
+    color: rgb(131, 131, 131);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.sitee{
+    color: #00A4B2;
+}
+
+.marganec{
+    margin-top: 15px;
+}
+.marganecDopDop{
+    margin-top: 25px;
+}
+
+.opiskanie{
+    color: rgb(131, 131, 131);
+    font-size: 15px;
+}
+
+.iconAndContent{
+    font-size: 10px;
+    display: flex;
+    color: rgb(131, 131, 131);
+    align-items: center;
+    gap: 5px;
+}
+
+.iconAndContent img{
+    width: 15px;
+}
+
+.footerContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerContent a{
+    color: #00A4B2;
+}
+.footerContent a:hover{
+    text-decoration: underline;
+}
